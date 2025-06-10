@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/script.js" defer></script>
+    <link rel="stylesheet" href="src/style.css">
+    <title>Cadastro de jogos</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro e Pesquisa de jogos</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#cadastroForm">Cadastrar Jogo</a></li>
+                <li><a href="#searchForm">Pesquisar Jogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="cadastroForm">
+            <label for="gameName"> Nome:
+                <input type="text" id="gameName" placeholder="Insira o nome do jogo" required>
+            </label>
+    
+            <label for="gamePlatform">Plataforma:
+                <input type="text" id="gamePlatform" placeholder="Insira a plataforma do jogo" required>
+            </label>
+
+            <div class="buttonss">
+                <button class=""><span class="flex"><img src="assets/save.png" alt="">Cadastrar</span></button>
+                <button class="updateBtn"><span class="flex"><img src="assets/update.png" alt="">Atualizar</span></button>
+                <button class="deleteBtn"><span class="flex"><img src="assets/delete.png" alt="">Excluir</span></button>
+            </div>
+        </form>
+
+        <form id="searchForm">
+            <label for="gameId">Id do jogo:
+                <input type="text" id="gameId" placeholder="Insira o ID do jogo" required>
+            </label>
+
+            <button onclick="PesquisarJogo"()>Pesquisar</button>
+          
+        </form>
+        <div id="resultadopesquisa"></div>
+    </main>
+</body>
+</html>
